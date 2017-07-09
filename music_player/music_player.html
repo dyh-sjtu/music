@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="referrer" content="no-referrer">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="dyh">
+    <title>云音乐-播放器</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="./webpack-test/bundle.js"></script>
+</head>
+<body>
+<div class="music-box">
+    <div class="img-filter"></div>
+    <div class="layer-ct">
+        <div class="lyric-box" id="lyric-box">
+            <div class="lyric-list" id="lyric-list"></div>
+        </div>
+    </div>
+    <div class="music-content">
+        <div class="music-show">
+            <p class="music-name"></p>
+        </div>
+        <div class="album-box"><img src="./img/樱花樱花想见你.gif" alt="歌手写真"></div>
+        <div class="player-box">
+            <div class="progress">
+                <span class="time current-time">00:00</span>
+                <div class="progress-container">
+                    <div class="progress-line">
+                        <div class="progress-handle"></div>
+                    </div>
+                    <div class="progress-copy"></div>
+                </div>
+                <span class="time duration-time">00:00</span>
+                <div class="volume-bar">
+                    <div class="muted"><img src="./img/播放器-有声.png" alt="音量控制" title="音量控制"></div>
+                    <div class="volume_container">
+                        <div class="volume-line">
+                            <div class="volume-handle"></div>
+                        </div>
+                        <div class="volume-copy"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="play-control">
+                <audio id="audio" class="music-src" src="./music/陈一发儿-童话镇.mp3"></audio>
+                <i class="music-icon play-type"><img src="./img/单曲循环.png" alt="播放类型" title="单曲循环"></i>
+                <i class="music-icon play-prev"><img src="./img/播放器上首.png" alt="播放上首" title="上一首"></i>
+                <i class="music-icon play-pause"><img src="./img/播放.png" alt="播放暂停切换" title="暂停"></i>
+                <i class="music-icon play-next"><img src="./img/播放器下首.png" alt="播放下首" title="下一首"></i>
+                <i class="music-icon have-play"><img src="./img/播放列表.png" alt="已播放文件" title="播放列表"></i>
+                <select name="music-arr" id="music-arr" multiple>
+                    <option value="刘美麟-暗香">刘美麟-暗香</option>
+                    <option value="1">1</option>
+                    <option value="ChaCha-情动">ChaCha-情动</option>
+                    <option value="CRITTY-遇萤（剧情版）">CRITTY-遇萤（剧情版）</option>
+                    <option value="G.E.M.邓紫棋-A.I.N.Y">G.E.M.邓紫棋-A.I.N.Y</option>
+                    <option value="love-story">love-story</option>
+                    <option value="陈旭-启示录">陈旭-启示录</option>
+                    <option value="陈一发儿-童话镇">陈一发儿-童话镇</option>
+                    <option value="崔子格-可念不可说">崔子格-可念不可说</option>
+                    <option value="浮诛">浮诛</option>
+                    <option value="葛八岁-樱花樱花想见你（Cover RSP）">葛八岁-樱花樱花想见你（Cover RSP）</option>
+                    <option value="林俊杰-不死之身">林俊杰-不死之身</option>
+                    <option value="林俊杰-江南">林俊杰-江南</option>
+                    <option value="林俊杰-杀手">林俊杰-杀手</option>
+                    <option value="林俊杰-她说">林俊杰-她说</option>
+                    <option value="萌萌哒天团-秦时明月">萌萌哒天团-秦时明月</option>
+                    <option value="那英,孙楠-只要有你">那英,孙楠-只要有你</option>
+                    <option value="那英-默">那英-默</option>
+                    <option value="男才女貌-外滩十八号">男才女貌-外滩十八号</option>
+                    <option value="排骨教主-清明上河图">排骨教主-清明上河图</option>
+                    <option value="时光笔墨">时光笔墨</option>
+                    <option value="誓言-求佛">誓言-求佛</option>
+                    <option value="双笙-小幸运">双笙-小幸运</option>
+                    <option value="王力宏,章子怡-爱一点">王力宏,章子怡-爱一点</option>
+                    <option value="魏小涵-飞雪玉花">魏小涵-飞雪玉花</option>
+                    <option value="魏小涵-一舞倾城">魏小涵-一舞倾城</option>
+                    <option value="魏小涵-易水两岸">魏小涵-易水两岸</option>
+                    <option value="武聆音雄-六脉神剑">武聆音雄-六脉神剑</option>
+                    <option value="薛之谦-方圆几里">薛之谦-方圆几里</option>
+                    <option value="薛之谦-你还要我怎样">薛之谦-你还要我怎样</option>
+                    <option value="薛之谦-我好像在哪见过你">薛之谦-我好像在哪见过你</option>
+                    <option value="张信哲-焚情">张信哲-焚情</option>
+                    <option value="赵雷-成都">赵雷-成都</option>
+                    <option value="哲也女神,武灵兒-天行九歌Ft.武灵兒（Cover霍尊）"></option>
+                </select>
+            </div>
+            <div class="music-function">
+                <i class="music-icon lyric"><img src="./img/播放器_首页歌词_32.png" alt="歌词" title="歌词"></i>
+                <i class="music-icon like" ><img src="./img/喜欢.png" alt="收藏" title="收藏"></i>
+                <i class="music-icon share"><a href="http://weibo.com/?topnav=1&mod=logo/" target="_blank"><img src="./img/分享.png" alt="分享" title="分享"></a></i>
+                <i class="music-icon more"><img src="./img/更多.png" alt="更多" title="更多"></i>
+            </div>
+            <p class="info">更多功能敬请期待！</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

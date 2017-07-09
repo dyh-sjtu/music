@@ -1,0 +1,415 @@
+html,body{
+    margin:0px;
+    padding: 0px;
+    height: 100%;
+    background: linear-gradient(45deg,#ca4bca 0%,#7fffd4 100%);
+    overflow: hidden;
+}
+audio{
+    width: 700px;
+    position: absolute;
+    display: none;
+}
+.progress{
+    width: 700px;
+    height: 50px;
+    background:black;
+    position: relative;
+}
+.current-time{
+    width: 45px;
+    height: 25px;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top:15px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 16px;
+    color: red;
+}
+.progress-container{
+    width: 300px;
+    height: 4px;
+    position: absolute;
+    left: 65px;
+    top:24px;
+    border:2px solid red;
+    border-radius: 20px;
+    z-index: 2;
+}
+.progress-line{
+    width: 300px;
+    height: 4px;
+    display: inline-block;
+    position: absolute;
+    left:-2px;
+    top:-2px;
+    border:2px solid red;
+    border-radius: 20px;
+    z-index: 5;
+    cursor: pointer;
+}
+.progress-copy{
+    width: 0px;
+    height: 4px;
+    display: inline-block;
+    position: absolute;
+    background: red;
+    left:-2px;
+    top:-2px;
+    border:2px solid red;
+    border-radius: 20px;
+    z-index: 1;
+}
+.progress-handle{
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    border:3px solid green;
+    position: absolute;
+    background:greenyellow ;
+    margin-top: -9px;
+    left: -2px;
+    z-index: 10;
+    cursor: pointer;
+}
+.duration-time{
+    width: 45px;
+    height: 25px;
+    display: inline-block;
+    position: absolute;
+    left: 385px;
+    top:15px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 16px;
+    color: red;
+}
+.volume-bar{
+    width: 300px;
+    height:50px;
+    position: relative;
+}
+.volume_container{
+    width: 200px;
+    height: 4px;
+    position:absolute;
+    top: 24px;
+    left: 480px;
+    border-radius: 20px;
+    border:2px solid red;
+    cursor: pointer;
+}
+.volume-line{
+    width: 200px;
+    height: 4px;
+    position:absolute;
+    border-radius: 20px;
+    border:2px solid red;
+    left: -2px;
+    top:-2px;
+    z-index: 5;
+    cursor: pointer;
+}
+.volume-copy{
+    width: 192px;
+    height: 4px;
+    position:absolute;
+    background: red;
+    left: -2px;
+    top:-2px;
+    border-radius: 20px;
+    border:2px solid red;
+    z-index: 1;
+}
+.volume-handle{
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    border:3px solid green;
+    position: absolute;
+    background:greenyellow ;
+    margin-top: -9px;
+    left: 190px;
+    z-index: 10;
+}
+.muted{
+    display:block;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top:15px;
+    left: 445px;
+}
+.muted img{
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+.play-control{
+    width: 700px;
+    height: 50px;
+    display: block;
+    background:black;
+    position: relative;
+}
+.play-control .play-type img{
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height:25px;
+    background:black;
+    left:20px;
+    top: 10px;
+    cursor: pointer;
+}
+.play-control .play-prev img{
+    display: inline-block;
+    width: 30px;
+    height:25px;
+    background:black;
+    position: absolute;
+    left:200px;
+    top: 10px;
+    cursor: pointer;
+}
+.play-control .play-pause img{
+    display: inline-block;
+    width: 35px;
+    height:35px;
+    position: absolute;
+    background:black;
+    left:335px;
+    top: 6px;
+    cursor: pointer;
+}
+.play-control .play-next img{
+    display: inline-block;
+    width: 30px;
+    height:25px;
+    position: absolute;
+    background:black;
+    right:200px;
+    top: 10px;
+    cursor: pointer;
+}
+.play-control .have-play img{
+    display: inline-block;
+    width: 30px;
+    height:25px;
+    position: absolute;
+    background:black;
+    right:20px;
+    top: 10px;
+    cursor: pointer;
+}
+#music-arr{
+    width:500px;
+    height: 600px;
+    display: none;
+    position: absolute;
+    right:-500px;
+    top:-500px;
+    border: 3px solid burlywood;
+}
+.music-function{
+    width: 700px;
+    height:50px;
+    display: block;
+    background:black;
+    position: relative;
+    border-radius: 0 0 20px 20px;
+}
+.music-function .lyric img{
+    display: inline-block;
+    width: 30px;
+    height:30px;
+    position: absolute;
+    left:15px;
+    top: 10px;
+    cursor: pointer;
+}
+.music-function .like img{
+    display: inline-block;
+    width: 30px;
+    height:30px;
+    position: absolute;
+    left:200px;
+    top: 10px;
+    cursor: pointer;
+}
+.music-function .share img{
+    display: inline-block;
+    width: 25px;
+    height:25px;
+    position: absolute;
+    right:200px;
+    top: 13px;
+    cursor: pointer;
+}
+.music-function .more img{
+    display: inline-block;
+    width: 30px;
+    height:30px;
+    position: absolute;
+    background:black;
+    right:20px;
+    top: 10px;
+    cursor: pointer;
+}
+.music-box{
+    width: 700px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px #5b6b77;
+    -moz-box-shadow: 0 20px 40px #5b6b77;
+    -webkit-box-shadow: 0 20px 40px #5b6b77;
+}
+.music-content{
+    width: 700px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px #5b6b77;
+    -moz-box-shadow: 0 20px 40px #5b6b77;
+    -webkit-box-shadow: 0 20px 40px #5b6b77;
+    z-index: 100;
+}
+.music-box .img-filter {
+    height: 100%;
+    background-size: cover;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+    border-radius: 20px;
+    display: none;
+}
+.music-box .layer-ct {
+    width: 700px;
+    height: 450px;
+    position: absolute;
+    background: rgba(0,0,0,.2);
+    border-radius: 20px 20px 0 0;
+    display: none;
+}
+.lyric-box{
+    width:700px;
+    height: 450px;
+    position: relative;
+    background: black;
+    opacity: 0.5;
+    margin: 0px auto;
+    border-radius: 20px 20px 0 0;
+}
+.lyric-list{
+    width:500px;
+    height: 300px;
+    position: absolute;
+    background: black;
+    left:50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    margin: 75px auto;
+    overflow:hidden;
+}
+p.lyric{
+    color:#fff;
+    position: relative;
+    line-height:16px ;
+    font-size: 16px;
+    letter-spacing: 5px;
+    top: 0;
+}
+@keyframes myRotate {
+    0%{transform:rotate(0deg);}
+    50%{transform:rotate(180deg);}
+    100%{transform:rotate(360deg);}
+}
+.album-box img{
+    animation:myRotate 30s linear infinite;
+}
+@keyframes highlight {
+    0%{color:#fff;}
+    100%{color: purple;}
+}
+.player-box{
+    width: 700px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    opacity: 0.4;
+    bottom: 0;
+}
+.music-show{
+    width:400px;
+    height:70px;
+    overflow: hidden;
+    margin:10px auto;
+    position: relative;
+}
+.color{
+    color: #fff;
+}
+.music-show p{
+    position: relative;
+    left:0px;
+    font-size: 20px;
+    line-height: 20px;
+}
+@keyframes myMove {
+    0%{left:0px}
+    25%{left:-200px}
+    50%{left:0px}
+    75%{left:200px}
+    100%{left:0px}
+}
+.album-box{
+    position: absolute;
+    display: block;
+    width:300px;
+    height: 300px;
+    border-radius:200px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 10px 10px #5b6b77;
+    -moz-box-shadow: 0 10px 10px #5b6b77;
+    -webkit-box-shadow: 0 10px 10px #5b6b77;
+}
+.album-box img{
+    position: absolute;
+    display: block;
+    width:300px;
+    height: 300px;
+    border: 2px solid lightpink;
+    border-radius:200px;
+    left: 0;
+    top: 0;
+    box-shadow: 10px 10px 10px #5b6b77;
+    -moz-box-shadow: 10px 10px 10px #5b6b77;
+    -webkit-box-shadow: 10px 10px 10px #5b6b77;
+    /*animation: rotate 30s linear infinite;*/
+}
+@keyframes lyric-move{
+    0%{font-size: 16px;font-style: italic;color:#fff;}
+    50%{font-size: 20px;font-style: italic;color:deeppink;}
+    100%{font-size: 16px;font-style: italic;color:#fff;}
+}
+p.info{
+    display: none;
+}
